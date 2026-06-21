@@ -126,17 +126,44 @@ export default function App() {
 
         {/* ── Header ── */}
         <header className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-xs font-semibold mb-5 tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
-            Browser-only · No uploads · 100% Private
+          {/* Mascot */}
+          <div className="flex justify-center mb-5">
+            <div className="relative float-anim">
+              <div className="absolute inset-0 rounded-3xl bg-violet-500/20 blur-2xl scale-110" />
+              <img
+                src="/mr-compress.jpg"
+                alt="Mr. Compress mascot"
+                className="relative w-28 h-28 md:w-36 md:h-36 rounded-3xl shadow-2xl shadow-violet-500/40 border-2 border-violet-500/30"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight leading-none"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            <span className="gradient-text glow">Smart Image</span>
-            <br />
-            <span className="text-white">Compressor</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-xs font-semibold mb-5 tracking-wider uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
+            Smart Image Compressor · Browser-only · 100% Private
+          </div>
+
+          <h1
+            className="text-6xl md:text-7xl font-extrabold mb-3 tracking-tight leading-none"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            <span
+              style={{
+                background: 'linear-gradient(135deg, #a78bfa 0%, #818cf8 40%, #c084fc 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0 0 24px rgba(167, 139, 250, 0.7))',
+                display: 'inline-block',
+              }}
+            >
+              Mr. Compress
+            </span>
           </h1>
+          <p className="text-slate-500 text-base font-medium mb-4 tracking-wide uppercase">
+            Smart Image Compressor
+          </p>
           <p className="text-slate-400 text-lg max-w-xl mx-auto">
             Compress JPG, PNG & WebP images instantly — right in your browser.
             Choose quality or hit a precise file size target.
