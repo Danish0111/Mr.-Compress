@@ -361,7 +361,9 @@ export default function App() {
                     min="10"
                     max="10000"
                     value={targetKB}
-                    onChange={(e) => setTargetKB(Math.max(10, Number(e.target.value)))}
+                    onChange={(e) => setTargetKB(Number(e.target.value))}
+                    onBlur={(e) => setTargetKB(Math.min(10000, Math.max(10, Number(e.target.value) || 10)))}
+                    className="kb-input"
                   />
                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm font-medium pointer-events-none">
                     KB
